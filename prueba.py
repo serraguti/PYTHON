@@ -7,6 +7,22 @@ texto = "Mi String en Python"
 #COMENTAR:  Control + K + C
 #DESCOMENTAR: Control + K + U
 print(numero)
+print(texto.lower())
+print(texto.upper())
+print(texto[0])
+print(texto.find("i"))
+print(texto.rfind("i"))
+print(texto.isdigit())
+print(texto.isdigit())
+print(texto[0:2])
+print(texto[1:])
+texto = texto.replace("i", "@")
 print(texto)
-for i in range(len(texto)):
-    print(texto[i])
+print(texto.count("@"))
+print(texto.startswith("@"))
+print(texto.endswith("@"))
+
+# for i in range(len(texto)):
+#     print(texto[i])
+#     if (i == 2):
+#         break
