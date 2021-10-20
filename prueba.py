@@ -8,3 +8,5 @@ texto = "Mi String en Python"
 #DESCOMENTAR: Control + K + U
 print(numero)
 print(texto)
+for i in range(len(texto)):
+    print(texto[i])
