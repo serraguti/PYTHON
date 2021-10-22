@@ -8,5 +8,5 @@ for i in range(1, 11):
     multiplicacion = numero * i
     print(str(numero) + " * " + str(i) + " = " + str(multiplicacion))
 print("Fin de programa")
-print("Pulse ENTER para finalizar")
+print("Pulse ENTER para finalizar bye")
 input()
