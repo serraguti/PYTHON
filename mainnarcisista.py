@@ -23,7 +23,10 @@ while (opcion != 0):
         else:
             print("El número NO es narcisista")
     elif (opcion == 3):
-        print("Introduce tu año de nacimiento")
+        # print("Introduce tu año de nacimiento")
+        print("Introduce tu fecha de nacimiento")
+        #Tendríamos que tener "algo" para que nos devuelva el año
+        #de una fecha  01/01/1980  01-01-1980
         anyonacimiento = int(input())
         # Podríamos llamar a un método que devuelva los años PRINT
         fechahoy = datetime.date.today()
