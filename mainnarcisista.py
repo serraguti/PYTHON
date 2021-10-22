@@ -6,7 +6,7 @@ while (opcion != 0):
     metodosnarcisista.menuNarcisista();
     opcion = int(input())
     if (opcion == 1):
-        print("Introduzca un número")
+        print("Introduzca un año")
         numero = int(input())
         metodosnarcisista.isBisiesto(numero)
     elif (opcion == 2):

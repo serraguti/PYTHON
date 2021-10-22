@@ -8,11 +8,11 @@ def menuNarcisista():
 def isBisiesto(anyo):
    if (anyo%4 == 0):
        if (anyo%100 != 0 or anyo%400 == 0):
-           print("BISIESTO")
+           return True
        else:
-           print("no es bisiesto")
+           return False
    else:
-       print("No es bisiesto")
+       return False
 
 def isNarcisista(textonumero):
     suma = 0
@@ -25,6 +25,6 @@ def isNarcisista(textonumero):
         suma = suma + potencia
     
     if (suma == int(textonumero)):
-        print("Narcisista!!!")
+        return True
     else:
-        print("No es narcisista")
+        return False
