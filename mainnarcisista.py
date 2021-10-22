@@ -27,7 +27,8 @@ while (opcion != 0):
         print("Introduce tu fecha de nacimiento")
         #Tendríamos que tener "algo" para que nos devuelva el año
         #de una fecha  01/01/1980  01-01-1980
-        anyonacimiento = int(input())
+        #anyonacimiento = int(input())
+        anyonacimiento = metodosnarcisista.getAnyoFecha(input())
         # Podríamos llamar a un método que devuelva los años PRINT
         fechahoy = datetime.date.today()
         anyoactual = fechahoy.year
