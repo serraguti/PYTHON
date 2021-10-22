@@ -3,6 +3,7 @@ def menuNarcisista():
     print("0.- Salir")
     print("1.- Año Bisiesto")
     print("2.- Número narcisista")
+    print("3.- Años bisiestos año nacimiento")
     print("Seleccione una opción: ")
 
 def isBisiesto(anyo):
