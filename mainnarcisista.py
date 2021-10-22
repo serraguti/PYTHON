@@ -8,11 +8,19 @@ while (opcion != 0):
     if (opcion == 1):
         print("Introduzca un año")
         numero = int(input())
-        metodosnarcisista.isBisiesto(numero)
+        respuesta = metodosnarcisista.isBisiesto(numero)
+        if (respuesta == True):
+            print("AÑO Bisiesto!!!")
+        else:
+            print("AÑO NO BISIESTO")
     elif (opcion == 2):
         print("Introduzca un número")
         textonumero = input()
-        metodosnarcisista.isNarcisista(textonumero)
+        respuesta = metodosnarcisista.isNarcisista(textonumero)
+        if (respuesta == True):
+            print("NARCISISTA")
+        else:
+            print("El número NO es narcisista")
     else:
         print("Hasta luego")
 print("Fin de programa")
