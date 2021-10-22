@@ -29,3 +29,23 @@ def isNarcisista(textonumero):
         return True
     else:
         return False
+
+def getAnyoFecha(textofecha):
+    #01/01/1980
+    #01-01-1980
+    #Primero voy a sustituir el caracter / o - por
+    #cualquier otro
+    if (textofecha.find("/") != -1):
+        #Tenemos una barra, la sustituimos
+        textofecha = textofecha.replace("/", "@")
+    else:
+        #Tenemos guiones entonces, lo sustituimos
+        textofecha = textofecha.replace("-", "@")        
+    #Ya tenemos que buscar la ultima @ para coger el año
+    # 01@01@1980
+    ultimaarroba = textofecha.rfind("@")
+    #Con substring, decimos que queremos recuperar desde 
+    # la ultima @ en adelante (año)
+    anyo = textofecha[ultimaarroba + 1:]
+    #Devolvemos String o devolvemos int
+    return int(anyo)
