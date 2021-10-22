@@ -49,3 +49,5 @@ while (opcion != 0):
         print("Introduzca número 2")
         numero2 = int(input())
 print("Fin de programa")
+print("Pulse ENTER para finalizar")
+input()
