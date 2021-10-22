@@ -1,3 +1,9 @@
+def menuNarcisista():
+    print("-------------Menu--------------")
+    print("0.- Salir")
+    print("1.- Año Bisiesto")
+    print("2.- Número narcisista")
+
 def isBisiesto(anyo):
    if (anyo%4 == 0):
        if (anyo%100 != 0 or anyo%400 == 0):
