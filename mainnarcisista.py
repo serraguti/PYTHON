@@ -33,7 +33,7 @@ while (opcion != 0):
         fechahoy = datetime.date.today()
         anyoactual = fechahoy.year
         for i in range(anyonacimiento, anyoactual + 1):
-            if (metodosnarcisista.isBisiesto(str(i))):
+            if (metodosnarcisista.isBisiesto(i)):
                 print(i)
     else:
         print("Hasta luego")
