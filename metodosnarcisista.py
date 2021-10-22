@@ -6,3 +6,18 @@ def isBisiesto(anyo):
            print("no es bisiesto")
    else:
        print("No es bisiesto")
+
+def isNarcisista(textonumero):
+    suma = 0
+    longitud = len(textonumero)
+    for i in range(longitud):
+        caracter = textonumero[i]
+        numero = int(caracter)
+        #potencia = numero**longitud
+        potencia = pow(numero, longitud)
+        suma = suma + potencia
+    
+    if (suma == int(textonumero)):
+        print("Narcisista!!!")
+    else:
+        print("No es narcisista")
