@@ -11,14 +11,14 @@ class Coche:
             print("Primero debe arrancar el coche")
         else:
             self.velocidad += 20
-        print("Velocidad actual " + str(self.velocidad))            
+        print("Velocidad actual " + self.marca + ": " + str(self.velocidad))         
     
     def frenar(self):
         if (self.velocidad == 0):
             print("El coche esta detenido")
         else:
             self.velocidad -= 10
-        print("Velocidad actual " + str(self.velocidad))
+        print("Velocidad actual " + self.marca + ": " + str(self.velocidad))
 
     def arrancar(self):
         #Cambiamos el estado a arrancado
