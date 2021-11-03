@@ -1,24 +1,21 @@
 import pyodbc
-servidor="LOCALHOST"
-bbdd="HOSPITAL"
-usuario="sa"
-password="azure"
-conexion = pyodbc.connect("Driver={ODBC Driver 17 for SQL Server}; Server=" + servidor
-+ "; Database=" + bbdd + ";UID=" + usuario + "; PWD=" + password)
-cursor = conexion.cursor()
-sqlselect = "select inscripcion, apellido from enfermo"
-cursor.execute(sqlselect)
-print("-----Listado de enfermos-------")
-for ins, ape in cursor:
-    print(str(ins) + " - " + ape)
-cursor.close()
+from conexionhospital import ConexionHospital
+
 print("Escriba una inscripción de enfermo para eliminar")
 inscripcion = int(input())
-sqldelete = "delete from enfermo where inscripcion=?"
-cursor = conexion.cursor()
-cursor.execute(sqldelete, (inscripcion))
-print("Registros eliminados: " + str(cursor.rowcount))
-cursor.commit()
-cursor.close()
-conexion.close()
+#AQUI GESTIONAMOS LA CONSULTA DE ACCION CON LA CLASE DE CONEXION
+#CREAMOS UN NUEVO OBJETO PARA LAS ACCIONES DE BBDD
+connection = ConexionHospital()
+#QUEREMOS ELIMINAR Y NOS DEVUELVE UN NUMERO
+respuesta = connection.eliminarEnfermo(inscripcion)
+print("Registros eliminados " + str(respuesta))
+#A continuacion, vamos a pedir modificar el apellido
+# de un enfermo por su inscripcion
+#Necesitamos pedir el apellido y la inscripcion
+print("Introduzca una inscripcion para modificar")
+ins = int(input())
+print("Introduzca el nuevo apellido")
+ape = input()
+respuesta = connection.modificarEnfermo(ape, ins)
+print("Registros modificados: " + str(respuesta))
 print("Fin de programa")
